@@ -13,7 +13,9 @@ function UserProfile() {
   const { user, logOut, getUser, loading } = useUser();
 
   const Delete = async () => {
-    const res = await axios.delete(`http://localhost:2020/users/${id}`);
+    const res = await axios.delete(
+      `https://fullstack-web-fl8k.onrender.com/users/${id}`,
+    );
     navigate("/sign-up");
   };
 

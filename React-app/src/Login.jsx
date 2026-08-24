@@ -14,11 +14,14 @@ function Login() {
   const onLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:2020/users/login", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://fullstack-web-fl8k.onrender.com/users/login",
+        {
+          name,
+          email,
+          password,
+        },
+      );
       const token = res.data;
       console.log(token);
       const loggedInUser = await loginUser(token);

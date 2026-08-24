@@ -17,9 +17,12 @@ function UpdateUser() {
     try {
       if (!role) return alert("fill your credentais");
       const token = localStorage.getItem("token");
-      const res = await axios.put(`http://localhost:2020/users/${id}`, {
-        role,
-      });
+      const res = await axios.put(
+        `https://fullstack-web-fl8k.onrender.com/users/${id}`,
+        {
+          role,
+        },
+      );
       navigate(`/user/${id}`);
     } catch (err) {
       console.error(err.message);

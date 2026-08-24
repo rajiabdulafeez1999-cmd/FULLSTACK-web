@@ -11,7 +11,7 @@ function SignUp() {
   const onSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:2020/users/create", {
+      await axios.post("https://fullstack-web-fl8k.onrender.com/users/create", {
         email,
         password,
       });
